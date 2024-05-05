@@ -1,8 +1,9 @@
 #from ibm_quantum_widgets import CircuitComposer
 from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
 from qiskit_aer import Aer
-from qiskit.visualization import plot_histogram
+from qiskit.visualization import plot_histogram, circuit_drawer
 from numpy import pi
+import matplotlib
 
 qreg_q = QuantumRegister(24, 'q')
 creg_c = ClassicalRegister(8, 'c')
@@ -136,13 +137,13 @@ circuit.measure(qreg_q[23], creg_c[7])
 # editor
 
 backend = Aer.get_backend('qasm_simulator') # the device to run on
-result = backend.run(circuit, shots=500).result()
+result = backend.run(circuit, shots=1).result()
 counts  = result.get_counts(circuit)
 print(counts)
-plot_histogram(counts, sort='desc')
+plot_histogram(counts, sort='desc', filename="invalidOutput")
 
 print(counts['11111111'] / sum(counts.values()))
-#circuit.draw(output='mpl')
+circuit.draw(output='mpl')
 
 # if('11111111' in counts):
 #     print("valid")

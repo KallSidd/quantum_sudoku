@@ -135,12 +135,12 @@ circuit.measure(qreg_q[23], creg_c[7])
 # editor
 
 backend = Aer.get_backend('qasm_simulator') # the device to run on
-result = backend.run(circuit, shots=50).result()
+result = backend.run(circuit, shots=1).result()
 counts  = result.get_counts(circuit)
 print(counts)
-plot_histogram(counts, sort='desc')
+plot_histogram(counts, sort='desc', filename="validOutput")
 
-#circuit.draw(output='mpl')
+circuit.draw(output='mpl', filename="validCircuit")
 
 if('11111111' in counts):
     print("valid")
