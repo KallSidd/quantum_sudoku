@@ -33,7 +33,7 @@ def verify(board=[[1, 2, 3, 4],[2, 3, 4, 1],[3, 4, 2, 1],[4, 3, 2, 1]], numShots
     getCell(circuit, qreg_q, 18, board[2][3])
     getCell(circuit, qreg_q, 19, board[3][3])
 
-    #conducting swap tests on all the columns
+    #conducting swap tests on all the rows
     circuit.cswap(qreg_q[0], qreg_q[1], qreg_q[2])
     circuit.cswap(qreg_q[0], qreg_q[1], qreg_q[4])
     circuit.cswap(qreg_q[0], qreg_q[1], qreg_q[3])
@@ -71,7 +71,7 @@ def verify(board=[[1, 2, 3, 4],[2, 3, 4, 1],[3, 4, 2, 1],[4, 3, 2, 1]], numShots
     circuit.measure(qreg_q[15], creg_c[3])
     circuit.barrier()
 
-    #row 1
+    #column 1
     circuit.h(qreg_q[20])
     circuit.cswap(qreg_q[20], qreg_q[1], qreg_q[6]).c_if(creg_c, 15)
     circuit.cswap(qreg_q[20], qreg_q[1], qreg_q[11]).c_if(creg_c, 15)
@@ -82,7 +82,7 @@ def verify(board=[[1, 2, 3, 4],[2, 3, 4, 1],[3, 4, 2, 1],[4, 3, 2, 1]], numShots
     circuit.h(qreg_q[20])
     circuit.measure(qreg_q[20], creg_c[4])
 
-    #row 2
+    #column 2
     circuit.h(qreg_q[21])
     circuit.cswap(qreg_q[21], qreg_q[2], qreg_q[7]).c_if(creg_c, 31)
     circuit.cswap(qreg_q[21], qreg_q[2], qreg_q[12]).c_if(creg_c, 31)
@@ -93,7 +93,7 @@ def verify(board=[[1, 2, 3, 4],[2, 3, 4, 1],[3, 4, 2, 1],[4, 3, 2, 1]], numShots
     circuit.h(qreg_q[21])
     circuit.measure(qreg_q[21], creg_c[5])
 
-    #row 3
+    #column 3
     circuit.h(qreg_q[22])
     circuit.cswap(qreg_q[22], qreg_q[3], qreg_q[8]).c_if(creg_c, 63)
     circuit.cswap(qreg_q[22], qreg_q[3], qreg_q[13]).c_if(creg_c, 63)
@@ -104,7 +104,7 @@ def verify(board=[[1, 2, 3, 4],[2, 3, 4, 1],[3, 4, 2, 1],[4, 3, 2, 1]], numShots
     circuit.h(qreg_q[22])
     circuit.measure(qreg_q[22], creg_c[6])
 
-    #row 4
+    #column 4
     circuit.h(qreg_q[23])
     circuit.cswap(qreg_q[23], qreg_q[4], qreg_q[9]).c_if(creg_c, 127)
     circuit.cswap(qreg_q[23], qreg_q[4], qreg_q[14]).c_if(creg_c, 127)
