@@ -5,7 +5,7 @@ quantum_sudoku
 [![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/quantum_sudoku/branch/main/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/quantum_sudoku/branch/main)
 
 
-A package to verify sudoku boardous sizes using qubits
+A package to verify sudoku boards of various sizes using qubits
 
 ### Copyright
 
