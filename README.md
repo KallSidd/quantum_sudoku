@@ -3,6 +3,7 @@ quantum_sudoku
 [//]: # (Badges)
 [![GitHub Actions Build Status](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/quantum_sudoku/workflows/CI/badge.svg)](https://github.com/REPLACE_WITH_OWNER_ACCOUNT/quantum_sudoku/actions?query=workflow%3ACI)
 [![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/quantum_sudoku/branch/main/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/quantum_sudoku/branch/main)
+[![readthedocs](https://readthedocs.org/projects/quantum-sudoku/)]
 
 
 A package to verify sudoku boards of various sizes using qubits
